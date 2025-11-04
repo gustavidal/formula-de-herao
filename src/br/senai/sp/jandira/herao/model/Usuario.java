@@ -7,7 +7,8 @@ public class Usuario {
     int a;
     int b;
     int c;
-    int s;
+    double s;
+    double area;
 
     public void obterLadosDoTriangulo(){
         Scanner leitor = new Scanner(System.in);
@@ -21,5 +22,26 @@ public class Usuario {
 
         System.out.print("Informe o lado \"c\" do triângulo: ");
         c = leitor.nextInt();
+
+        realizarContas();
+    }
+
+    public void realizarContas(){
+        s = (a + b + c) / 2;
+
+        double sA = s - a;
+        double sB = s - b;
+        double sC = s - c;
+
+        area = Math.sqrt(s * sA * sB * sC);
+
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(s);
+        System.out.println(sA);
+        System.out.println(sB);
+        System.out.println(sC);
+        System.out.println(area);
     }
 }
