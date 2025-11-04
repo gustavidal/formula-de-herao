@@ -23,7 +23,26 @@ public class Usuario {
         System.out.print("Informe o lado \"c\" do triângulo: ");
         c = leitor.nextInt();
 
-        realizarContas();
+        validarTrianguloReal();
+    }
+
+    public void validarTrianguloReal(){
+        System.out.println("");
+        System.out.println("Vamos verificar se o triângulo é real:");
+
+        System.out.println("");
+        System.out.println(a + " + " + b + " > " + c + " -> " + (a + b) + " > " + c);
+        System.out.println(b + " + " + c + " > " + a + " -> " + (b + c) + " > " + a);
+        System.out.println(c + " + " + a + " > " + b + " -> " + (c + a) + " > " + b);
+        System.out.println("");
+
+        if ((a + b) > c && (b + c) > a && (c + a) > b){
+            System.out.println("Os valores informados fazem um triângulo real.");
+            realizarContas();
+        } else if (((a + b) < c || (b + c) < a || (c + a) < b)){
+            System.out.println("Os valores informados não fazem um triângulo real!");
+            System.out.println("Sem solução!");
+        }
     }
 
     public void realizarContas(){
