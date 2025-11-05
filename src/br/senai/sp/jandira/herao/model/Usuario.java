@@ -30,7 +30,6 @@ public class Usuario {
         System.out.println("");
         System.out.println("Vamos verificar se o triângulo é real:");
 
-        System.out.println("");
         System.out.println(a + " + " + b + " > " + c + " -> " + (a + b) + " > " + c);
         System.out.println(b + " + " + c + " > " + a + " -> " + (b + c) + " > " + a);
         System.out.println(c + " + " + a + " > " + b + " -> " + (c + a) + " > " + b);
@@ -54,13 +53,19 @@ public class Usuario {
 
         area = Math.sqrt(s * sA * sB * sC);
 
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-        System.out.println(s);
-        System.out.println(sA);
-        System.out.println(sB);
-        System.out.println(sC);
-        System.out.println(area);
+        exibirResultados();
+    }
+
+    public void exibirResultados(){
+        String areaDec = String.format("%.2f", area);
+
+        System.out.println("");
+        System.out.println("-------------------------------------");
+        System.out.println("Lado a: " + a);
+        System.out.println("Lado b: " + b);
+        System.out.println("Lado c: " + c);
+        System.out.println("-------------------------------------");
+        System.out.println("Área aproximada do triângulo: " + areaDec);
+        System.out.println("-------------------------------------");
     }
 }
